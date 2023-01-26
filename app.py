@@ -20,7 +20,7 @@ from flask_mongoengine import MongoEngine
 #################################################
 app = Flask(__name__)
 conn = 'mongodb://localhost:27017'
-client - pymongo.MongoClient(conn)
+client = pymongo.MongoClient(conn)
 db = client.project_3_test
 
 # app.config["MONGO_URI"] = "mongodb://localhost:27017/myDatabase" #CHANGE WHEN DATABASE NAME IS CONFIRMED
