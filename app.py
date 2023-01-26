@@ -1,8 +1,8 @@
 import numpy as np
 from flask import Flask, jsonify, render_template
-from flask_pymongo import PyMongo
-from pymongo import MongoClient
-from flask_mongoengine import MongoEngine
+import pymongo
+# from pymongo import MongoClient
+# from flask_mongoengine import MongoEngine
 
 # Database Setup
 # Find corret setup for MongoDB
