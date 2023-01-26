@@ -54,8 +54,7 @@ def homepage():
 @app.route("/api/v1.0/usda_data")
 def getdata():
     data = db.find()
-    return flask.jsonify([blank for blank in blank])
-    #return jsonify([i for i in mongo.db.data.find({})])
+    return jsonify([i for i in data])
     #return mongo.send_file(file) - WOULD NEED TO INCLUDE FILE - DB.FIND(FILE)
     # SET UP A RETURN OF THE JSON FILE FOR THE CORRECT THING
 
