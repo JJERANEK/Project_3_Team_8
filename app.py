@@ -34,8 +34,8 @@ def homepage():
 
 @app.route("/api/v1.0/usda_data")
 def getdata():
-    data = collection.find()
-    return data
+    data = list(collection.find())
+    print(data)
     # return jsonify([i for i in data])
 
 if __name__ == '__main__':
