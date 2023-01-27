@@ -15,3 +15,5 @@ six
 SQLAlchemy
 Werkzeug
 wincertstore
+flask_cors
+pymongo

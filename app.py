@@ -1,41 +1,22 @@
-import numpy as np
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify
+from flask_cors import CORS, cross_origin
 import pymongo
-# from pymongo import MongoClient
-# from flask_mongoengine import MongoEngine
-
-# Database Setup
-# Find corret setup for MongoDB
-
-# # reflect an existing database into a new model
-# Base = automap_base()
-# # reflect the tables
-# Base.prepare(autoload_with=engine)
-
-# # Save reference to the table
-# Passenger = Base.classes.test
+import json
+import pandas as pd
+from pymongo import MongoClient
 
 #################################################
 # Flask Setup
 #################################################
 app = Flask(__name__)
-conn = 'mongodb://localhost:27017'
+cors = CORS(app)
+
+# app.config['JSON_SORT_KEYS'] = False
+
+conn = 'mongodb+srv://project_3_team:pass@cluster0.gkjcbhn.mongodb.net/test'
 client = pymongo.MongoClient(conn)
-db = client.project_3_test
-
-# app.config["MONGO_URI"] = "mongodb://localhost:27017/myDatabase" #CHANGE WHEN DATABASE NAME IS CONFIRMED
-# mongodb_client = PyMongo(app)
-# db = mongodb_client.db
-#mongo = PyMongo(app, uri="mongodb://localhost:27017/myDatabase")
-
-
-# app.config['MONGODB_SETTINGS'] = {
-#     'db': 'your_database',
-#     'host': 'localhost',
-#     'port': 27017
-# }
-# db = MongoEngine()
-# db.init_app(app)
+db = client.project_3_db
+collection = db.usda_data
 
 #################################################
 # Flask Routes
@@ -53,10 +34,8 @@ def homepage():
 
 @app.route("/api/v1.0/usda_data")
 def getdata():
-    data = db.find()
+    data = collection.find()
     return jsonify([i for i in data])
-    #return mongo.send_file(file) - WOULD NEED TO INCLUDE FILE - DB.FIND(FILE)
-    # SET UP A RETURN OF THE JSON FILE FOR THE CORRECT THING
 
 if __name__ == '__main__':
     app.run(debug=True)
