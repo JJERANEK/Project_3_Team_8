@@ -2,12 +2,11 @@ body {
     padding: 0;
     margin: 0;
     background-color: black;
-    min-height:100%;
   }
   
-  html {
+  /* html {
     height: 100%;
-  }
+  } */
 
 .container-fluid {
   width: 100%;
