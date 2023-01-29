@@ -78,8 +78,8 @@ console.log(DATAHOLDER.features[1].properties)
         
       });
       // Giving each feature a popup with information that's relevant to it
-      layer.bindPopup("<h1>" + CountyData + ", " + StateData + "</h1><hr><h4> Population: " + PopData + "</h4><hr><h4> Fast Food Restaurants: " + 
-        FFRData + "</h4><hr><h4> Grocery Stores: " + GroceryData + "</h4><hr><h4> Farmers Markets: " + FMData + "</h4>");
+      layer.bindPopup("<h3>" + CountyData + ", " + StateData + "</h3><hr><h6> Population: " + PopData + "</h6><br><h6> Fast Food Restaurants: " + 
+        FFRData + "</h6><br><h6> Grocery Stores: " + GroceryData + "</h6><br><h6> Farmers Markets: " + FMData + "</h6>");
 
     }
 
@@ -204,8 +204,8 @@ console.log(DATAHOLDER.features[1].properties)
         }
       });
       // Giving each feature a popup with information that's relevant to it
-      layer.bindPopup("<h1>" + CountyData + ", " + StateData + "</h1><hr><h4> Population: " + PopData + "</h4><hr><h4> Fast Food Restaurants: " + 
-        FFRData + "</h4><hr><h4> Grocery Stores: " + GroceryData + "</h4><hr><h4> Farmers Markets: " + FMData + "</h4>");
+      layer.bindPopup("<h4>" + CountyData + ", " + StateData + "</h4><hr><h6> Population: " + PopData + "</h6><br><h6> Fast Food Restaurants: " + 
+        FFRData + "</h6><br><h6> Grocery Stores: " + GroceryData + "</h6><br><h6> Farmers Markets: " + FMData + "</h6>");
 
     }
 
