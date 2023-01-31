@@ -131,7 +131,7 @@ function buildCharts(FIPS) {
   let granimInstance = new Granim({
     element: '#canvas-basic',
     direction: 'left-right',
-    isPausedWhenNotInView: true,
+    isPausedWhenNotInView: false,
     states : {
         "default-state": {
             gradients: [
